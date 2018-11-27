@@ -1,0 +1,48 @@
+pure_domain_name:
+    - ^<domain>$
+domain_defination:
+    - <domain>.*(是|叫)(啥|什么)+
+    - (啥|什么)+(是|叫)<domain>
+    - (咨询|了解|问一下|询问)<domain>
+inherit_from_last_sentence:
+    - <domain>(的|)呢
+    - <domain>怎么算的
+    - <domain>.*是一样的吗
+    - <domain>是不是.*一样
+only_inherit_property:
+    - (你们|贵)+公司
+    - ^公司
+only_inherit_domain:
+    - <person>需要(购|)买
+    - <person>(能|)帮<person>.*买.*吗
+    - 不买.*<pronoun>.*可以
+    - <domain>.*其他.*项目
+    - 可以买.*<domain>
+    - 可以买吗
+    - <domain>.*买
+#    - 买(?!(什么|哪些|那些|产品)+)
+    - 条款
+    - <domain>[与和]+<domain>.*(区别|差别)+
+    - <domain>[和与]+<domain>的释义
+    - 有什么(不同|区别|不一样)
+    - (有|包括)+(哪些|什么)+(系列)+
+    - .*和.*差别
+    - 写错了
+    - 是否
+    - \d+岁呢
+    - <domain>.*怎么样
+no_inherit:
+    - 查.*保单(信息|)
+    - 保单(信息|).*查
+    - 公司查询
+    - 是.*还是
+query_product:
+    - 怎.*配.*保险
+#    - <person>.*需要.*选择哪.*款.*计划
+    - <person>.*哪.*款.*(计划|保险|产品)
+    - 是什么.*(产品|险)
+    - (?<!不)(买|投保|推荐)+.*(产品|险)+
+    - (?<!不)(买|投保|推荐)+什么
+    - (买|投保|推荐)+(什么|哪些|那些)+
+    - \[哪那]+[款种]+.*(保险|计划)
+    - (旅行|旅游|玩)$
