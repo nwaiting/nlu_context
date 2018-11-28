@@ -32,10 +32,8 @@
     /export/app/bot_factory_nlu/nlu_dir/data/userdict/entity
 
 - 子文件：
->
 >       company_domain.txt
         entity_intent.txt
         company_property.txt
         entity_domain.txt
         entity_property.txt
->
